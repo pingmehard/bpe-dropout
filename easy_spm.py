@@ -33,7 +33,7 @@ class spm_encoder:
             print('Model trained!')
 
         except Exception as exx:
-            # Check if we have limit for bpe vocab. And chenges the limit to suggestion from SPT.
+            # Check if we have limit for bpe vocab. And changes the limit to suggestion from SPT.
             if 'too high' in str(exx):
                 self.vocab_size = int(str(exx).split()[-1].replace('.',''))
                 print(f'Vocab size set to {self.vocab_size}')
