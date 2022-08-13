@@ -51,6 +51,8 @@ class spm_encoder:
         out_type == int or str. (Example: out_type = str) By default it is int.
         dropout == False or True. (Example: dropout = True) By default it is False.
         '''
+        assert type(iterable_strings) == 'str', "Change string to [string] type. Requires list for function."
+
         result = []
         for str in iterable_strings:
             result.append(self.spm_encode(str, dropout = dropout, out_type = out_type))
